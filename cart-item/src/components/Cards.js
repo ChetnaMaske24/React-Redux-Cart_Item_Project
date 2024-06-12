@@ -8,16 +8,14 @@ import { ADD } from '../redux/actions/action';
 
 const Cards = () => {
 
-  // const [data, setData] = useState(Cardsdata);
-  // // console.log(data);
+  const [data, setData] = useState(Cardsdata);
+  // console.log(data);
 
+  const dispatch = useDispatch();
 
-  // const dispatch = useDispatch();
-
-
-  // const send = (e)=>{
-  //   // console.log(e);
-  //   dispatch(ADD(e));
+  const send = (e)=>{
+    // console.log(e);
+    dispatch(ADD(e));
   }
 
   return (
