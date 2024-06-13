@@ -10,27 +10,26 @@ const CardsDetails = () => {
 //   const [data,setData] = useState([]);
 //   // console.log(data);
 
-//   const {id} = useParams();
-//   // console.log(id);
+  const {id} = useParams();
+  // console.log(id);
 
 //   const history = useNavigate();
 
 //   const dispatch = useDispatch();
 
   
-//   const getdata = useSelector((state)=> state.cartreducer.carts);
-//   // console.log(getdata);
+  const getdata = useSelector((state)=> state.cartreducer.carts);
+  // console.log(getdata);
 
 
-//   const compare = ()=>{
-//     let comparedata = getdata.filter((e)=>{
-//       return e.id == id
-//     });
-//     setData(comparedata);
-//   }
+  const compare = ()=>{
+    let comparedata = getdata.filter((e)=>{
+      return e.id == id
+    });
+    setData(comparedata);
+  }
 
-//   // add data
-  
+// add data
 
 //   const send = (e)=>{
 //     // console.log(e);

@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container'
 import Badge from '@mui/material/Badge';
 import Nav from 'react-bootstrap/Nav'
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import { NavLink } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 import Table from 'react-bootstrap/esm/Table';
@@ -15,25 +14,24 @@ const Header = () => {
     const [price,setPrice] = useState(0);
     // console.log(price);
 
-        const getdata = useSelector((state)=> state.cartreducer.carts);
-        // console.log(getdata);
+    const getdata = useSelector((state)=> state.cartreducer.carts);
+      // console.log(getdata);
 
-        const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+
     const handleClose = () => {
         setAnchorEl(null);
     };
 
-
     const dlt = (id)=>{
         dispatch(DLT(id))
     }
-
 
     const total = ()=>{
         let price = 0;
