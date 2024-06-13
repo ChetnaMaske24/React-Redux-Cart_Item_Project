@@ -7,15 +7,15 @@ import { DLT,ADD,REMOVE } from '../redux/actions/action'
 
 const CardsDetails = () => {
 
-//   const [data,setData] = useState([]);
-//   // console.log(data);
+  const [data,setData] = useState([]);
+  // console.log(data);
 
   const {id} = useParams();
   // console.log(id);
 
-//   const history = useNavigate();
+  const history = useNavigate();
 
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   
   const getdata = useSelector((state)=> state.cartreducer.carts);
@@ -29,23 +29,22 @@ const CardsDetails = () => {
     setData(comparedata);
   }
 
-// add data
-
-//   const send = (e)=>{
-//     // console.log(e);
-//     dispatch(ADD(e));
-//   }
+  // add data
   
-//   const dlt = (id)=>{
-//     dispatch(DLT(id));
-//     history("/");
-// }
+  const send = (e)=>{
+    // console.log(e);
+    dispatch(ADD(e));
+  }
+  
+  const dlt = (id)=>{
+    dispatch(DLT(id));
+    history("/");
+}
 
 // // remove one
 // const remove = (item)=>{
 //   dispatch(REMOVE(item))
 // }
-
 
 //   useEffect(()=>{
 //     compare();
