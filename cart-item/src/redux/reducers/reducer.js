@@ -34,25 +34,25 @@ export const cartreducer = (state = INIT_STATE, action) => {
                 carts:data
             }
 
-        // case "RMV_ONE":
-        //     const IteamIndex_dec = state.carts.findIndex((iteam)=> iteam.id === action.payload.id);
+        case "RMV_ONE":
+            const IteamIndex_dec = state.carts.findIndex((iteam)=> iteam.id === action.payload.id);
    
-        //     if(state.carts[IteamIndex_dec].qnty >= 1){
-        //         const dltiteams = state.carts[IteamIndex_dec].qnty -= 1
-        //         console.log([...state.carts,dltiteams]);
+            if(state.carts[IteamIndex_dec].qnty >= 1){
+                const dltiteams = state.carts[IteamIndex_dec].qnty -= 1
+                console.log([...state.carts,dltiteams]);
 
-        //         return {
-        //             ...state,
-        //             carts:[...state.carts]
-        //         }
-        //     }else if(state.carts[IteamIndex_dec].qnty === 1 ){
-        //         const data = state.carts.filter((el)=>el.id !== action.payload);
+                return {
+                    ...state,
+                    carts:[...state.carts]
+                }
+            }else if(state.carts[IteamIndex_dec].qnty === 1 ){
+                const data = state.carts.filter((el)=>el.id !== action.payload);
 
-        //         return {
-        //             ...state,
-        //             carts:data
-        //         }
-        //     }
+                return {
+                    ...state,
+                    carts:data
+                }
+            }
 
         default:
             return state
