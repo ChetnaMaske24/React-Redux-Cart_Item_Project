@@ -1,7 +1,7 @@
-import {configureStore} from "redux";
+import {createStore} from "redux";
 import rootred from "./redux/reducers/main";
 
-const store = configureStore(
+const store = createStore(
     rootred
 );
 
