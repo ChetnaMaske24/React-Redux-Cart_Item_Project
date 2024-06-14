@@ -129,7 +129,6 @@ const Header = () => {
                     <img src="./cart.gif" alt="" className='emptycart_img' style={{width:"5rem",padding:10}} />
                    </div>
                     }
-
                 </Menu>
             </Navbar>
         </>
